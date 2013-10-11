@@ -1,0 +1,6 @@
+<div id="content"></div>
+
+<script>
+var cats = new CoffeeCats.Collections.Cats();
+cats.reset(<%= Cat.all.to_json.html_safe %>);
+</script>
