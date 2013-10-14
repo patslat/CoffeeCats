@@ -4,7 +4,10 @@ window.CoffeeCats =
   Views: {}
   Routers: {}
   initialize: ($content, cats) ->
-    new CoffeeCats.Routers.Cats({ content: $content, collection: cats })
+    new CoffeeCats.Routers.Cats({
+      elements: { index: $content, show: $content },
+      cats: cats
+    })
     Backbone.history.start()
 
 $(document).ready ->

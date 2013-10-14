@@ -4,11 +4,11 @@ class CoffeeCats.Views.CatsIndex extends Backbone.View
 
   template: JST['cats/index']
 
-  render: () ->
+  render: ->
     @$el.html @template
     $container = @$el.find("#cats-index")
     @collection.each (cat) =>
-      renderedCat = new CoffeeCats.ViewCatsShow({ model: cat })
+      renderedCat = new CoffeeCats.Views.CatShow(model: cat)
       $container.append(renderedCat.render().$el)
     this
 
