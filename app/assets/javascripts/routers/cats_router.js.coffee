@@ -15,12 +15,6 @@ class CoffeeCats.Routers.Cats extends Backbone.Router
 
   index: ->
     @_renderView('index', collection: @cats)
-    view = new @viewConstructors['index']({
-      content: @content,
-      collection: @cats
-    })
-    @content.html(view.render().$el)
-
 
   _renderView: (type, options) ->
     newView = new @viewConstructors[type](options)
