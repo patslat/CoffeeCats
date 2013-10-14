@@ -1,4 +1,4 @@
-class CatController < ApplicationController
+class CatsController < ApplicationController
   respond_to :json
   def create
     @cat = Cat.new(params[:cat])

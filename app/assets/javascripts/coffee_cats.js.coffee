@@ -3,14 +3,11 @@ window.CoffeeCats =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: (cats) ->
-    console.log cats
-    new CoffeeCats.Routers.Cats
+  initialize: ($content, cats) ->
+    new CoffeeCats.Routers.Cats({ content: $content, collection: cats })
+    Backbone.history.start()
 
 $(document).ready ->
-  $content = $("#content")
   #get bootstrapped data
-  CoffeeCats.initialize({
-    content: $content,
-    collection: cats
-  })
+  $content = $("#content")
+  CoffeeCats.initialize($content, cats)
