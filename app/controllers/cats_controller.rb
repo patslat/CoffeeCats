@@ -1,5 +1,5 @@
 class CatsController < ApplicationController
-  respond_to :json
+  respond_to :json, :html
   def create
     @cat = Cat.new(params[:cat])
     if @cat.save

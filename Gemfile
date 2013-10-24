@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'backbone-on-rails'
 gem 'handlebars'
+gem 'haml'
 
 
 # Gems used only for assets and not required
